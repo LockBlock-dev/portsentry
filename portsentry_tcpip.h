@@ -44,7 +44,9 @@
 
 #include <features.h>
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 struct tcphdr
   {
@@ -87,7 +89,9 @@ struct tcphdr
 #ifndef __NETINET_IP_H
 #define __NETINET_IP_H 1
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 struct timestamp
   {
@@ -154,7 +158,9 @@ struct iphdr
 #ifndef __NETINET_UDP_H
 #define __NETINET_UDP_H    1
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* UDP header as specified by RFC 768, August 1980. */
 struct udphdr {
@@ -164,6 +170,8 @@ struct udphdr {
   u_int16_t	check;
 };
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* netinet/udp.h */
